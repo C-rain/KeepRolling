@@ -14,9 +14,9 @@ export function EmptyState({
   actionLabel?: string;
 }) {
   return (
-    <div className="rounded-[2rem] border border-dashed border-white/14 bg-white/[0.02] p-8 text-center">
-      <h2 className="text-2xl font-black text-white">{title}</h2>
-      <p className="mt-3 text-sm leading-7 text-white/68">{description}</p>
+    <div className="rounded-[2rem] border border-dashed border-[var(--border)] bg-white/76 p-8 text-center shadow-[0_24px_60px_rgba(90,67,42,0.1)]">
+      <h2 className="text-2xl font-black text-[var(--ink)]">{title}</h2>
+      <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{description}</p>
       {actionHref && actionLabel ? (
         <SiteLink
           href={actionHref}

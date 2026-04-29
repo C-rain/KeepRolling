@@ -3,8 +3,8 @@ import { SiteLink } from "@/components/site/site-link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/8 bg-black">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.3fr,1fr,1fr]">
+    <footer className="border-t border-black/8 bg-[var(--ink)] text-white">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.3fr_1fr_1fr]">
         <div className="space-y-4">
           <div className="text-[0.7rem] font-black uppercase tracking-[0.3em] text-[var(--accent)]">
             Keep Skate Class
@@ -25,7 +25,7 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-white/68">
             {siteContent.navigation.map((item) => (
               <li key={item.href}>
-                <SiteLink href={item.href} className="transition hover:text-white">
+                <SiteLink href={item.href} className="transition hover:text-[var(--sun)]">
                   {item.label}
                 </SiteLink>
               </li>

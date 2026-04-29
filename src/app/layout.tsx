@@ -52,7 +52,7 @@ export default function RootLayout({
     <html lang="zh-Hant">
       <body>
         <StructuredData data={buildLocalBusinessJsonLd()} />
-        <div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(215,255,63,0.14),transparent_22%),linear-gradient(180deg,#050505_0%,#0d0d0d_48%,#050505_100%)] text-white">
+        <div className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_12%_4%,rgba(255,216,107,0.36),transparent_26%),radial-gradient(circle_at_88%_2%,rgba(169,199,162,0.42),transparent_24%),linear-gradient(180deg,#fff9ef_0%,#fff4e6_42%,#f8eadb_100%)] text-[var(--foreground)]">
           <Header />
           {children}
           <Footer />

@@ -76,17 +76,17 @@ export default async function BlogPostPage({
         })}
       />
 
-      <article className="grid gap-10 lg:grid-cols-[0.9fr,1.1fr]">
-        <aside className="h-fit rounded-[2rem] border border-white/10 bg-white/[0.03] p-5 lg:sticky lg:top-24">
+      <article className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <aside className="h-fit rounded-[2rem] border border-[var(--border)] bg-white/76 p-5 shadow-[0_24px_60px_rgba(90,67,42,0.1)] lg:sticky lg:top-24">
           <p className="text-xs font-black uppercase tracking-[0.28em] text-[var(--accent)]">
             文章目錄
           </p>
-          <nav className="mt-4 grid gap-3 text-sm text-white/72">
+          <nav className="mt-4 grid gap-3 text-sm text-[var(--muted)]">
             {post.sections.map((section, index) => (
               <a
                 key={section.heading}
                 href={`#section-${index}`}
-                className="transition hover:text-white"
+                className="transition hover:text-[var(--ink)]"
               >
                 {section.heading}
               </a>
@@ -98,26 +98,26 @@ export default async function BlogPostPage({
           <p className="text-xs font-black uppercase tracking-[0.28em] text-[var(--accent)]">
             {post.category}
           </p>
-          <h1 className="mt-3 text-4xl font-black text-white sm:text-5xl">
+          <h1 className="mt-3 text-4xl font-black text-[var(--ink)] sm:text-5xl">
             {post.title}
           </h1>
-          <p className="mt-4 text-sm text-white/46">
+          <p className="mt-4 text-sm text-[var(--muted)]">
             {post.publishedAt} / {post.readTime}
           </p>
           <img
             src={post.coverImage}
             alt={post.title}
-            className="mt-8 h-[340px] w-full rounded-[2rem] border border-white/10 object-cover"
+            className="mt-8 h-[340px] w-full rounded-[2rem] border-[10px] border-white object-cover shadow-[0_24px_60px_rgba(90,67,42,0.12)]"
           />
           <div className="mt-8 space-y-10">
             {post.sections.map((section, index) => (
               <section key={section.heading} id={`section-${index}`}>
-                <h2 className="text-2xl font-black text-white">{section.heading}</h2>
+                <h2 className="text-2xl font-black text-[var(--ink)]">{section.heading}</h2>
                 <div className="mt-4 space-y-4">
                   {section.body.map((paragraph) => (
                     <p
                       key={paragraph}
-                      className="text-sm leading-8 text-white/72 sm:text-base"
+                      className="text-sm leading-8 text-[var(--muted)] sm:text-base"
                     >
                       {paragraph}
                     </p>
@@ -143,7 +143,7 @@ export default async function BlogPostPage({
 
       {relatedPosts.length > 0 ? (
         <section className="mt-12">
-          <h2 className="text-3xl font-black text-white">相關文章</h2>
+          <h2 className="text-3xl font-black text-[var(--ink)]">相關文章</h2>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
             {relatedPosts.map((relatedPost) => (
               <BlogCard key={relatedPost.slug} post={relatedPost} />

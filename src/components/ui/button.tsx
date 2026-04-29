@@ -9,10 +9,10 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-[var(--accent)] px-5 py-3 text-sm text-black hover:bg-[#f0ff7c]",
+          "bg-[var(--sun)] px-5 py-3 text-sm text-[var(--ink)] shadow-[0_14px_32px_rgba(90,67,42,0.16)] hover:-translate-y-0.5 hover:bg-[#ffe48a]",
         secondary:
-          "border border-white/15 bg-white/5 px-5 py-3 text-sm text-white hover:bg-white/10",
-        ghost: "px-3 py-2 text-sm text-white hover:bg-white/8",
+          "border border-[var(--border)] bg-white/70 px-5 py-3 text-sm text-[var(--ink)] hover:-translate-y-0.5 hover:bg-white",
+        ghost: "px-3 py-2 text-sm text-[var(--ink)] hover:bg-black/5",
       },
       size: {
         default: "h-11",

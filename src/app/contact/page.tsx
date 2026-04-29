@@ -28,11 +28,11 @@ export default function ContactPage() {
         description="請告訴我們學員年齡、是否有滑板經驗、想學的方向與方便上課的區域，Keep 會回覆適合的課程與教練建議。"
       />
 
-      <section className="mt-8 grid gap-6 lg:grid-cols-[0.95fr,1.05fr]">
+      <section className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="space-y-6">
-          <article className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6">
-            <h2 className="text-2xl font-black text-white">聯絡資訊</h2>
-            <ul className="mt-4 space-y-3 text-sm leading-7 text-white/72">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-white/76 p-6 shadow-[0_24px_60px_rgba(90,67,42,0.1)]">
+            <h2 className="text-2xl font-black text-[var(--ink)]">聯絡資訊</h2>
+            <ul className="mt-4 space-y-3 text-sm leading-7 text-[var(--muted)]">
               <li>電話：{siteContent.site.phone}</li>
               <li>Email：{siteContent.site.email}</li>
               <li>上課地點：{siteContent.site.address}</li>
@@ -49,7 +49,7 @@ export default function ContactPage() {
             </ul>
           </article>
 
-          <article className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]">
+          <article className="overflow-hidden rounded-[2rem] border border-[var(--border)] bg-white/76 shadow-[0_24px_60px_rgba(90,67,42,0.1)]">
             <iframe
               title="Keep 滑板教室地圖"
               src={siteContent.site.mapEmbedUrl}
@@ -60,9 +60,9 @@ export default function ContactPage() {
           </article>
         </div>
 
-        <article className="rounded-[2rem] border border-[var(--accent)]/25 bg-white/[0.03] p-6">
-          <h2 className="text-2xl font-black text-white">LINE 詢問時可以先提供</h2>
-          <ul className="mt-5 space-y-4 text-sm leading-7 text-white/72">
+        <article className="rounded-[2rem] border border-[var(--accent)]/25 bg-[var(--accent-soft)] p-6 shadow-[0_24px_60px_rgba(90,67,42,0.1)]">
+          <h2 className="text-2xl font-black text-[var(--ink)]">LINE 詢問時可以先提供</h2>
+          <ul className="mt-5 space-y-4 text-sm leading-7 text-[var(--muted)]">
             <li>• 學員年齡與是否有滑板經驗</li>
             <li>• 想詢問的課程：初學、兒童、成人、親子、一對一或進階技巧</li>
             <li>• 方便上課的台中區域與大概時段</li>
@@ -72,15 +72,15 @@ export default function ContactPage() {
             href={siteContent.site.lineUrl}
             target="_blank"
             rel="noreferrer"
-            className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-bold text-black"
+            className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[var(--sun)] px-5 py-3 text-sm font-bold text-[var(--ink)]"
           >
             加入 LINE 詢問課程
           </a>
         </article>
       </section>
 
-      <section className="mt-12 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6">
-        <h2 className="text-2xl font-black text-white">常見問題</h2>
+      <section className="mt-12 rounded-[2rem] border border-[var(--border)] bg-white/76 p-6 shadow-[0_24px_60px_rgba(90,67,42,0.1)]">
+        <h2 className="text-2xl font-black text-[var(--ink)]">常見問題</h2>
         <div className="mt-5">
           <FAQAccordion items={siteContent.faqs} />
         </div>

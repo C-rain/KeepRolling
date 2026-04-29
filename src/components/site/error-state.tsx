@@ -11,11 +11,11 @@ export function ErrorState({
   description?: string;
 }) {
   return (
-    <div className="rounded-[2rem] border border-red-500/20 bg-red-500/8 p-8 text-center">
-      <h2 className="text-2xl font-black text-white">
+    <div className="rounded-[2rem] border border-red-500/20 bg-white/76 p-8 text-center shadow-[0_24px_60px_rgba(90,67,42,0.1)]">
+      <h2 className="text-2xl font-black text-[var(--ink)]">
         {title ?? "目前無法顯示這個頁面"}
       </h2>
-      <p className="mt-3 text-sm leading-7 text-white/68">
+      <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
         {description ??
           "請稍後重新整理，或直接透過 LINE 與我們聯繫，我們會協助你取得需要的資訊。"}
       </p>

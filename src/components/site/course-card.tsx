@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 export function CourseCard({ course }: { course: CourseContent }) {
   return (
-    <article className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-[0_24px_60px_rgba(0,0,0,0.16)]">
+    <article className="overflow-hidden rounded-[2rem] border border-[var(--border)] bg-white/76 shadow-[0_24px_60px_rgba(90,67,42,0.1)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(90,67,42,0.16)]">
       <img
         src={course.coverImage}
         alt={course.name}
@@ -18,15 +18,15 @@ export function CourseCard({ course }: { course: CourseContent }) {
       <div className="space-y-5 p-5">
         <div className="flex flex-wrap gap-2">
           <Badge>{course.category}</Badge>
-          <Badge className="text-[var(--accent)]">{course.difficulty}</Badge>
+          <Badge className="bg-[var(--sage-soft)] text-[var(--ink)]">{course.difficulty}</Badge>
         </div>
 
         <div>
-          <h3 className="text-xl font-black text-white">{course.name}</h3>
-          <p className="mt-2 text-sm leading-7 text-white/68">{course.excerpt}</p>
+          <h3 className="text-xl font-black text-[var(--ink)]">{course.name}</h3>
+          <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{course.excerpt}</p>
         </div>
 
-        <dl className="grid gap-3 text-sm text-white/76">
+        <dl className="grid gap-3 text-sm text-[var(--muted)]">
           <div className="flex items-center gap-2">
             <Timer className="size-4 text-[var(--accent)]" aria-hidden="true" />
             <dd>{course.duration}</dd>

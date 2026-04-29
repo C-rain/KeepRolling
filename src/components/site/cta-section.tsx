@@ -20,20 +20,21 @@ export function CTASection({
   secondaryLabel?: string;
 }) {
   return (
-    <section className="rounded-[2.5rem] border border-white/10 bg-[linear-gradient(135deg,rgba(215,255,63,0.15),rgba(255,255,255,0.02))] px-6 py-10 sm:px-8 lg:px-10">
+    <section className="relative overflow-hidden rounded-[2.5rem] border border-[var(--border)] bg-[linear-gradient(135deg,#fffdf7_0%,#ffe0d4_48%,#e3f0df_100%)] px-6 py-10 shadow-[0_26px_80px_rgba(90,67,42,0.12)] sm:px-8 lg:px-10">
+      <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-[var(--sun)]/60 blur-2xl" />
       <div className="max-w-3xl">
         <p className="text-xs font-black uppercase tracking-[0.28em] text-[var(--accent)]">
           {kicker}
         </p>
-        <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
+        <h2 className="mt-3 text-3xl font-black text-[var(--ink)] sm:text-4xl">
           {title}
         </h2>
-        <p className="mt-4 text-sm leading-7 text-white/72 sm:text-base">
+        <p className="mt-4 text-sm leading-7 text-[var(--muted)] sm:text-base">
           {description}
         </p>
       </div>
 
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+      <div className="relative mt-6 flex flex-col gap-3 sm:flex-row">
         <SiteLink
           href={primaryHref}
           target={primaryHref.startsWith("http") ? "_blank" : undefined}
