@@ -2,6 +2,7 @@
 
 import { getCourseBySlug, type CoachContent } from "@/content/site-content";
 import { Badge } from "@/components/ui/badge";
+import { SiteLink } from "@/components/site/site-link";
 
 export function CoachCard({ coach }: { coach: CoachContent }) {
   return (
@@ -32,9 +33,9 @@ export function CoachCard({ coach }: { coach: CoachContent }) {
         {coach.teachesCourseSlugs.map((slug, index) => (
           <span key={slug}>
             {index === 0 ? " " : "、"}
-            <a href={`/courses/${slug}`} className="text-white hover:text-[var(--accent)]">
+            <SiteLink href={`/courses/${slug}`} className="text-white hover:text-[var(--accent)]">
               {getCourseBySlug(slug)?.name ?? slug}
-            </a>
+            </SiteLink>
           </span>
         ))}
       </div>

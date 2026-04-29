@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { CTASection } from "@/components/site/cta-section";
 import { FAQAccordion } from "@/components/site/faq-accordion";
+import { SiteLink } from "@/components/site/site-link";
 import { StructuredData } from "@/components/ui/structured-data";
 import { getCourseBySlug, siteContent } from "@/content/site-content";
 import {
@@ -160,12 +161,12 @@ export default async function CourseDetailPage({
             >
               {course.lineCtaLabel}
             </a>
-            <a
+            <SiteLink
               href={course.contactCtaHref}
               className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-bold text-white"
             >
               查看聯絡資訊
-            </a>
+            </SiteLink>
           </div>
         </aside>
       </section>

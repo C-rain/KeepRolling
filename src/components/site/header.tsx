@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { siteContent } from "@/content/site-content";
 import { MobileNavigation } from "@/components/site/mobile-navigation";
+import { SiteLink } from "@/components/site/site-link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -24,13 +25,13 @@ export function Header() {
           className="hidden items-center gap-1 lg:flex"
         >
           {siteContent.navigation.map((item) => (
-            <a
+            <SiteLink
               key={item.href}
               href={item.href}
               className="rounded-full px-4 py-2 text-sm font-medium text-white/72 transition hover:bg-white/7 hover:text-white"
             >
               {item.label}
-            </a>
+            </SiteLink>
           ))}
         </nav>
 

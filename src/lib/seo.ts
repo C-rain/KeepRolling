@@ -5,7 +5,13 @@ import { siteContent } from "@/content/site-content";
 const metadataBase = new URL(process.env.APP_BASE_URL ?? "http://localhost:3000");
 
 export function absoluteUrl(path = "/") {
-  return new URL(path, metadataBase).toString();
+  const basePath =
+    metadataBase.pathname === "/"
+      ? "/"
+      : `${metadataBase.pathname.replace(/\/$/, "")}/`;
+  const relativePath = path.replace(/^\//, "");
+
+  return new URL(`${basePath}${relativePath}`, metadataBase.origin).toString();
 }
 
 export function buildMetadata(input: {

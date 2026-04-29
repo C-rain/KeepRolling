@@ -4,6 +4,7 @@ import { ArrowRight, MapPin, Timer } from "lucide-react";
 import type { CourseContent } from "@/content/site-content";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
+import { SiteLink } from "@/components/site/site-link";
 import { cn } from "@/lib/utils";
 
 export function CourseCard({ course }: { course: CourseContent }) {
@@ -38,12 +39,12 @@ export function CourseCard({ course }: { course: CourseContent }) {
         </dl>
 
         <div className="flex flex-col gap-3 sm:flex-row">
-          <a
+          <SiteLink
             href={`/courses/${course.slug}`}
             className={cn(buttonVariants({ variant: "secondary" }), "w-full")}
           >
             查看課程介紹
-          </a>
+          </SiteLink>
           <a
             href={course.lineCtaHref}
             target="_blank"

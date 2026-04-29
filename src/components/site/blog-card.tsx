@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 import type { BlogPostContent } from "@/content/site-content";
 import { Badge } from "@/components/ui/badge";
+import { SiteLink } from "@/components/site/site-link";
 
 export function BlogCard({ post }: { post: BlogPostContent }) {
   return (
@@ -23,13 +24,13 @@ export function BlogCard({ post }: { post: BlogPostContent }) {
           <p className="mt-2 text-sm leading-7 text-white/68">{post.excerpt}</p>
         </div>
 
-        <a
+        <SiteLink
           href={`/blog/${post.slug}`}
           className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)]"
         >
           閱讀全文
           <ArrowRight className="size-4" aria-hidden="true" />
-        </a>
+        </SiteLink>
       </div>
     </article>
   );

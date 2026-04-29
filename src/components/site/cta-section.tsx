@@ -1,3 +1,4 @@
+import { SiteLink } from "@/components/site/site-link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -33,16 +34,23 @@ export function CTASection({
       </div>
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-        <a href={primaryHref} className={cn(buttonVariants(), "w-full sm:w-auto")}>
+        <SiteLink
+          href={primaryHref}
+          target={primaryHref.startsWith("http") ? "_blank" : undefined}
+          rel={primaryHref.startsWith("http") ? "noreferrer" : undefined}
+          className={cn(buttonVariants(), "w-full sm:w-auto")}
+        >
           {primaryLabel}
-        </a>
+        </SiteLink>
         {secondaryHref && secondaryLabel ? (
-          <a
+          <SiteLink
             href={secondaryHref}
+            target={secondaryHref.startsWith("http") ? "_blank" : undefined}
+            rel={secondaryHref.startsWith("http") ? "noreferrer" : undefined}
             className={cn(buttonVariants({ variant: "secondary" }), "w-full sm:w-auto")}
           >
             {secondaryLabel}
-          </a>
+          </SiteLink>
         ) : null}
       </div>
     </section>

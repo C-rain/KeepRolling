@@ -1,4 +1,5 @@
 import { siteContent } from "@/content/site-content";
+import { SiteLink } from "@/components/site/site-link";
 
 export function Footer() {
   return (
@@ -24,9 +25,9 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-white/68">
             {siteContent.navigation.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="transition hover:text-white">
+                <SiteLink href={item.href} className="transition hover:text-white">
                   {item.label}
-                </a>
+                </SiteLink>
               </li>
             ))}
           </ul>
