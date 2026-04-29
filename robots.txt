@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://c-rain.github.io/KeepRolling/sitemap.xml
